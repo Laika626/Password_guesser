@@ -15,3 +15,4 @@ Algoritmo de random
 Algoritmo fuerza bruta
 Algoritmo contraseñas comunes
 Algoritmo diccionario
+## Utilizar passwords.txt
