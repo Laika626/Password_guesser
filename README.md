@@ -15,4 +15,5 @@ Algoritmo de random
 Algoritmo fuerza bruta
 Algoritmo contraseñas comunes
 Algoritmo diccionario
-## Utilizar passwords.txt
+## Password database
+Las contraseñas para comparar estan guardadas en el archivo passwords.txt, asegurate de tenerlo en el mismo directorio que ProyectoA01206671.py  
