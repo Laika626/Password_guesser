@@ -14,6 +14,8 @@ def brute_force(user_password, characters):
         # ##count = count + 1;
         # if user_password == character:
         #     return character, count
+        if character == user_password:
+            return character
         for second_character in characters:
             concatenacion = character + second_character
             if concatenacion == user_password:
