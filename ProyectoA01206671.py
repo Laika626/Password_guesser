@@ -95,23 +95,32 @@ def compare_with_list(user_password):
 
 
 
+    """
+    (operadores, funciones, listas, listas anidadas, ciclos y condicionales)
+    recibe: user_password, brute_force_option
+    Recibe la contraseña y la compra con una concatenacion de caracteres, guadados
+    en una matriz que van cambiando si la contraseña no coincide con la concatenacion.
+    devuelve: dependiendo si la contraseña es encotrada o no, despleagara el mensaje 
+    de "Encontrada" o "No encontrada"
+    """
 def brute_force(user_password, brute_force_option):
     """
     (operadores, funciones, listas, listas anidadas, ciclos y condicionales)
     recibe: user_password, brute_force_option
-    Saca el producto punto de 2 matrices, multiplica cada elemento de las 2
-    matrices y después los suma (hace una reducción)
-    devuelve: dependiendo si la contraseña es encotrada o no, deprende la leyende
+    Recibe la contraseña y la compra con una concatenacion de caracteres, guadados
+    en una matriz que van cambiando si la contraseña no coincide con la concatenacion.
+    devuelve: dependiendo si la contraseña es encotrada o no, despleagara el mensaje 
+    de "Encontrada" o "No encontrada"
     """
-     count = 0 
-     #positions in character set for each letter of the password
-     p = [0,0,0]
-     #chosen character set
-     c = characters[brute_force_option]
-     # """ because is a string
-     current_guess = ""
+    count = 0 
+    #positions in character set for each letter of the password
+    p = [0,0,0]
+    #chosen character set
+    c = characters[brute_force_option]
+    # """ because is a string
+    current_guess = ""
 
-     while current_guess is not user_password:
+    while current_guess is not user_password:
         count = count + 1
         print(f"Count: {count}, Current guess: {current_guess}")
         current_guess = c[p[0]] + c[p[1]] + c[p[2]]
@@ -128,7 +137,7 @@ def brute_force(user_password, brute_force_option):
                     return "No encontre tu contraseña"
 
          
-     return "Not found"
+    return "Not found"
 
 
 """
