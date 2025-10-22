@@ -93,17 +93,25 @@ def compare_with_list(user_password):
             return f"Entcontre tu contraseña, es la {number_of_tries} de la lista."
     return f"No encontre tu contraseña, intente {number_of_tries} veces."
 
+def brute_force_next_password(c, p):
+    i = 0
+    carry_over = 1
+
+    while i < len(p) and carry_over == 1:
+        p[i] = p[i] + 1
+        if p[i] == len(c):
+            p[i] = 0
+            carry_over = 1
+        else:
+            carry_over = 0
+        i = i + 1
+
+    if carry_over == 1 :
+        return False
+    return p
 
 
-    """
-    (operadores, funciones, listas, listas anidadas, ciclos y condicionales)
-    recibe: user_password, brute_force_option
-    Recibe la contraseña y la compra con una concatenacion de caracteres, guadados
-    en una matriz que van cambiando si la contraseña no coincide con la concatenacion.
-    devuelve: dependiendo si la contraseña es encotrada o no, despleagara el mensaje 
-    de "Encontrada" o "No encontrada"
-    """
-def brute_force(user_password, brute_force_option):
+def brute_force_for_specific_length(user_password, brute_force_option, length):
     """
     (operadores, funciones, listas, listas anidadas, ciclos y condicionales)
     recibe: user_password, brute_force_option
@@ -114,32 +122,44 @@ def brute_force(user_password, brute_force_option):
     """
     count = 0 
     #positions in character set for each letter of the password
-    p = [0,0,0]
+    p = []
+
+    for i in range(length):
+        p.append(0)
+
     #chosen character set
+    print(brute_force_option)
     c = characters[brute_force_option]
     # """ because is a string
     current_guess = ""
 
     while current_guess is not user_password:
         count = count + 1
+        
+        current_guess = ""
+
+        for i in range(length):
+            current_guess = current_guess + c[p[i]]
+
         print(f"Count: {count}, Current guess: {current_guess}")
-        current_guess = c[p[0]] + c[p[1]] + c[p[2]]
+
         if current_guess == user_password:
-            return "Encontre tu contraseña"
-        p[0] = p[0] + 1
-        if p[0] == len(c):
-            p[1] = p[1] + 1
-            p[0] = 0
-            if p[1] == len(c):
-                p[2] = p[2] + 1
-                p[1] = 0
-                if p[2] == len(c):
-                    return "No encontre tu contraseña"
+            return True
+        p = brute_force_next_password(c, p)
 
-         
+        if not p:
+            return False
+
+
+   
+def brute_force(user_password, brute_force_option):
+    for i in range(1, 9):
+        if(brute_force_for_specific_length(user_password,brute_force_option, i)):
+            return "I found your password"
     return "Not found"
+    
 
-
+"""crashea con el 3"""
 """
 ========================== función main  =====================================
 """
