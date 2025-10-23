@@ -1,7 +1,7 @@
 # Importar time API de la libreria estandar de python
 import time
 
-# Matriz de caracteres#
+# Matriz de caracteres
 characters = [
     ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
         'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],
@@ -42,9 +42,9 @@ Descubramos si tu contraseña es una de ellas...
 # Explicacion de la función brute_force
 brute_force_explanation = '''
 A continuacion vamos a intentar adivinar tu contraseña por
-furtza bruta, es decir vamos a probar todas las combinaciones desde "a"
+fuerza bruta, es decir vamos a probar todas las combinaciones desde "a"
 hasta "ZZZZZ". Esto puede tomar un tiempo muy largo, por eso únicamente
-vamos a probar contraseñas de máximo 8 characters, y para hacerlo más rápido
+vamos a probar contraseñas de máximo 5 characters, y para hacerlo más rápido
 puedes seleccionar un grupo más pequeño de letras.
 '''
 
@@ -66,7 +66,7 @@ Opcion a elegir:
 def get_brute_force_option():
     """
     (uso de funciones y ciclos)
-    funcion auxiliar para obtener la opcion del menu que el usuario quiera
+    Funcion auxiliar para obtener la opcion del menu que el usuario quiera
     Le muestra al usuario el menu por lo menos una vez, hasta que el usuario
     de una opcion valida
     """
@@ -79,9 +79,11 @@ def get_brute_force_option():
 def import_list_of_passwords():
     """
     (uso de ciclos y funciones)
-    funcion auxiliar para leer las lineas de contraseñas que se tiene en el
-    archivo passwoerds.txt, para poder compararlas en la función
-    compare_with_list
+    Funcion auxiliar para leer las lineas de contraseñas que se tiene en el
+    archivo passwords.txt, para poder compararlas
+    en la función compare_with_list
+    Devuelve: Una lista en la que cada elemento es una de las contraseñas
+    obtenidas del archivo.
     """
     with open("passwords.txt", 'r') as file:
         all_lines = file.readlines()
@@ -114,6 +116,15 @@ def compare_with_list(user_password):
 
 
 def brute_force_next_password(c, p):
+    """
+    (uso de ciclos, variables, condicionales, operadores aritmeticos
+    y funciones)
+    Función que actua como un candado de combinación, cada vez que se ejecuta
+    mueve las posisiones de cada caracter de la contraseña a la siguiente
+    posición para poder hacer el mapping con el set de caracteres escogidos
+    por el usuario.
+    Devuleve: p o falso dependiendo del resulado de iteración.s
+    """
     i = 0
     carry_over = 1
 
@@ -135,11 +146,10 @@ def bf_specific_length(user_password, brute_force_option, length):
     """
     (operadores, funciones, listas, listas anidadas, ciclos y condicionales)
     recibe: user_password, brute_force_option, length
-    Recibe la contraseña y la compra con una concatenacion no se
-    de caracteres, guadados en una matriz que van cambiando
-    si la contraseña no coincide con la concatenacion.
-    devuelve: dependiendo si la contraseña es encotrada o no,
-    despleagara el mensaje de "Encontrada" o "No encontrada"
+    En esta función se prueban todas las contraseñas posibles dado un set de
+    caracteres y una longitud especifica.
+    devuelve: dependiendo si la contraseña es encotrada, regresa la contraseña.
+    Si la contraseña no es encontrada regresa False.
     """
     count = 0
     # positions in character set for each letter of the password
@@ -166,6 +176,15 @@ def bf_specific_length(user_password, brute_force_option, length):
 
 
 def brute_force(user_password, brute_force_option):
+    """
+    (Funciones, ciclos y condicionales)
+    Recibe: user_password, brute_force_option
+    Funcion que itera
+    Devuelve: dependiendo si la contraseña es encotrada o no, asi
+    como la contraseña que encontro la función. En caso que la
+    funcion no encuentre la contraseña, esta despleagara el mensaje
+    "Not found"
+    """
     for i in range(1, 6):
         guess = bf_specific_length(user_password, brute_force_option, i)
         if (guess):
