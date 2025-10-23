@@ -1,4 +1,9 @@
- dificiles de adivinar. Este proyecto explorara que tan facil y rapido es adivinar una contraseña mediante diferentes metodos. Se implementaran los siguientes metodos: Al azar, comparando la contraseña del usuario mediante contraseñas comunes y comparando caracter por caracter (fuerza bruta). 
+# I know your Password
+### Contexto
+
+------------
+
+Las contraseñas son una de las bases mas importantes de nuestra seguridad en linea. Frecuentemente nos encontramos con noticias que exponen casos en los cuales la seguridad de personas, organizaciones o empresas se vieron comprometidos por un problema o leak con las contraseñas, teniendo como consecuencia perdida monetaria significativa y de confianza por parte de los usuarios. La forma en la que nosotros como usuarios nos podemos proteger es mediante la eleccion de contraseñas que sean dificiles de adivinar. Este proyecto explorara que tan facil y rapido es adivinar una contraseña mediante diferentes metodos. Se implementaran los siguientes metodos: Al azar, comparando la contraseña del usuario mediante contraseñas comunes y comparando caracter por caracter (fuerza bruta). 
 - Referencias: https://www.youtube.com/watch?v=7U-RbOKanYs, https://www.youtube.com/watch?v=3NjQ9b3pgIg
 
 ------------
@@ -30,7 +35,7 @@ La función time.perf_counter() devuelve el valor actual de un contador de alta 
 Referencias:
 https://docs.python.org/es/3.10/library/time.html
 
-------------
+---
 
 #### Instrucciones
 1. Descargar los arvhivos Passwords.txt y ProyectoA01206671.py.
