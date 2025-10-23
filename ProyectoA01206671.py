@@ -18,16 +18,16 @@ characters = [
 """
 ================== variables de display para el usuario ======================
 """
-# Explicacion del programa
+# Explicación del programa
 intro = '''
 Programa: Adivinador de Contraseñas de 5 caracteres como máximo
-Autor: Fernanda Jimenez Estrada
+Autor: Fernanda Jiménez Estrada
 Matricula: A01206671
 
 Este es un programa para adivinar contraseñas.
 Tiene dos formas para intentar adivinar tu contraseña.
 1. Revisando las 2258 contraseñas más comunes.
-2. Utilizando fuerza bruta, sobre un set de caracteres.
+2. Utilizando fuerza bruta sobre un set de caracteres.
 Por favor, digita tu contraseña de máximo 5 caracteres.
 '''
 # Explicacion de la función compare_whith_list
@@ -39,13 +39,14 @@ guardadas en el archivo passwords.txt.
 Descubramos si tu contraseña es una de ellas...
 '''
 
-# Explicacion de la función brute_force
+# Explicación de la función brute_force
 brute_force_explanation = '''
 A continuacion vamos a intentar adivinar tu contraseña por
 fuerza bruta, es decir vamos a probar todas las combinaciones desde "a"
 hasta "ZZZZZ". Esto puede tomar un tiempo muy largo, por eso únicamente
-vamos a probar contraseñas de máximo 5 characters, y para hacerlo más rápido
+vamos a probar contraseñas de máximo 5 caracteres, y para hacerlo más rápido
 puedes seleccionar un grupo más pequeño de letras.
+Esto puede tomar unos minutos.
 '''
 
 # Desplaye de menu para la funcion brute_force
@@ -54,7 +55,7 @@ Lista de opciones:
 Opcion 0: Minusculas
 Opcion 1: Números
 Opcion 2: Mayusculas
-Opcion 3: Caractese alfanumericos, mayusculas y minusculas
+Opcion 3: Caracteres alfanumericos, mayusculas y minusculas
 Opcion a elegir:
 '''
 
@@ -67,7 +68,7 @@ def confirm_user_password(user_password):
     """
     (uso de funciones y ciclos while)
     Recibe = user_password
-    Funcion auxiliar que reviza la contraseña y pide de nuevo
+    Función auxiliar que reviza la contraseña y pide de nuevo
     la contraseña si no es valida (mayor a 5 o caracteres no alfanumericos)
     Regresa: user_password
     """
