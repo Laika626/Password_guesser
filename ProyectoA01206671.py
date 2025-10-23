@@ -26,7 +26,7 @@ Matricula: A01206671
 
 Este es un programa para adivinar contraseñas.
 Tiene dos formas para intentar adivinar tu contraseña.
-1. Revisando las 9664 contraseñas más comunes.
+1. Revisando las 2258 contraseñas más comunes.
 2. Utilizando fuerza bruta, sobre un set de caracteres.
 Por favor, digita tu contraseña de máximo 5 caracteres.
 '''
@@ -54,13 +54,28 @@ Lista de opciones:
 Opcion 0: Minusculas
 Opcion 1: Números
 Opcion 2: Mayusculas
-Opcion 3: Todos los characters
+Opcion 3: Caractese alfanumericos, mayusculas y minusculas
 Opcion a elegir:
 '''
 
 """
 ==================== funciones de auxiliares  ================================
 """
+
+
+def confirm_user_password(user_password):
+    """
+    (uso de funciones y ciclos while)
+    Recibe = user_password
+    Funcion auxiliar que reviza la contraseña y pide de nuevo
+    la contraseña si no es valida (mayor a 5 o caracteres no alfanumericos)
+    Regresa: user_password
+    """
+    while (user_password.isalnum() is False) or (len(user_password) > 5):
+        print("Contraseña invalida")
+        print("Debe de tener 5 o menos caracters y deben ser alfanumericos")
+        user_password = input("Dame tu contraseña: ")
+    return user_password
 
 
 def get_brute_force_option():
@@ -206,7 +221,9 @@ def main():
     print(intro)
 
     # Leer la contraseña de tu usuario
-    user_password = str(input("Introduce la contraseña: "))
+    user_password = input("Dame tu contraseña de 5 caracteres: ")
+    # Revizar la contraseña (que cumpla las condicionws del programa)
+    user_password = confirm_user_password(user_password)
 
     print(common_passwords_explanation)
     print(compare_with_list(user_password))
