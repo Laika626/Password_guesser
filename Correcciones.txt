@@ -1,0 +1,34 @@
+============================ Correccion 1 =====================================
+
+Sub-Competencia: Estándares SICT0401A Intepretación: Apliación de buenas pŕacticas de programación
+
+Error original: Se tenia un documetno.py extra en el repositorio. 
+
+Cambio realizado: Se elimino el documento.py extra en el repositorio.
+
+============================ Correcction 2 =====================================
+
+Sub-Competencia: Tecnologías  SEG0702AInterpretación: Incorporación de nuevas herramientas usadas en el área e investigación por cuenta propia 
+
+Error original: No se tenia API en la entrega de la reisión.
+
+Cambio realizado: Se integro API en la entrega, el modelo usado fue el de time.
+
+============================ Correcction 3 =====================================
+
+Sub-Competencia: Estándares   SICT0401A Intepretación: Apliación de buenas pŕacticas de programación
+
+Error original: No se tenian comentarios apropiados en la entrega de revisión
+
+Cambio realizado: Se integraron comentarios adecuados en el codigo. 
+
+
+============================ Correcction 4 =====================================
+
+Sub-Competencia: Evalúa  SICT0301A Intepretación: Apliación de técnicas de programación
+
+Error original: No se tenian operadoes aritmeticos en la entrega de revisión.
+
+Cambio realizado: se ocupan operadores aritmeticos en la función main, brute_force, 
+compare_with_list y en brute_force_next_password
+
