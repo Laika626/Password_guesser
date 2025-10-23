@@ -10,10 +10,21 @@ Las contraseñas son una de las bases mas importantes de nuestra seguridad en li
      3.1.1 Generara otro guess
    3.2 Imprimir guess, contador
 4. Salir del programa
-### Por investigar 
-Algoritmo de random
-Algoritmo fuerza bruta
-Algoritmo contraseñas comunes
-Algoritmo diccionario
 ## Password database
-Las contraseñas para comparar estan guardadas en el archivo passwords.txt, asegurate de tenerlo en el mismo directorio que ProyectoA01206671.py  
+Las contraseñas para comparar estan guardadas en el archivo passwords.txt, asegurate de tenerlo en el mismo directorio que ProyectoA01206671.py 
+## Instrucciones 
+1. Descargar los arvhivos Passwords.txt y ProyectoA01206671.py.
+2. Correr en terminal con:
+    python3 ProyetoA01206671.py
+3. Proporcionar una contraseña de maximo 5 caracteres. 
+4. El programa comparara la contraseña con la lista de contraseñas (Passwords.txt). Te dara un mensaje dependiendo de si la encontro en el archivo o no. 
+5. Seleccionar la opcion con la que se quiera hacer la busqueda de la contraseña mediante brute force. Las opciones son las siguientes:
+  Minusculas
+  Números
+  Mayusculas
+  Todos los characters
+6. El programa encontrara la contraseña mediante fuerza bruta. El problema trabaja con contraseñas de 5 caracteres, pero debido a la metodología utilizada, esta puede tomar varios minutos. 
+7. El programa le proprocionara el tiempo que tardo en encontrar su contraseña mediante fuerza bruta y le dara la contraseña desarrollada.
+
+
+## Gracias por utilizar este adivinador de contraseñas
